@@ -23,7 +23,7 @@ body {
 }
 
 .contact-list {
-    background: #333;
+    background:  #d6dbdf;
 	width: 700px;
 	margin: 70px auto;
 	box-shadow: 0 4px 0px #333;
@@ -49,4 +49,27 @@ body {
 
 .header .h-stats {
     width: 200px;
+}
+
+.contact {
+    display: flex;
+    font-size: 1.2em;
+    border-bottom: solid 2px #444;
+    letter-spacing: 2px;
+}
+
+.contact-name {
+	flex-grow: 1;
+    padding: 20px 10px 10px 10px;
+}
+
+.contact-name:hover .remove-contact {
+    visibility: visible;
+}
+
+.remove-contact {
+    visibility: hidden;
+    margin-right: 10px;
+    color:  #c0392b;
+    cursor: pointer;
 }

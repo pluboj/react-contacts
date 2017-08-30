@@ -16,7 +16,7 @@ const HeaderStats = props => {
   )
 }
 
-HeaderStats.propTypes = {
+HeaderStats.PropTypes = {
   contacts: PropTypes.array.isRequired,
 };
 

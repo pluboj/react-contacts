@@ -6,13 +6,13 @@ import PropTypes from 'prop-types';
 const Header = props => {
   return (
     <div className="header">
-    <HeaderStats contacts={[]} />
+    <HeaderStats contacts={props.contacts} />
     	<h2>Contacts</h2>
     </div>
   );
 }
 
-Header.propTypes = {
+Header.PropTypes = {
   contacts: PropTypes.array.isRequired,
 };
 
