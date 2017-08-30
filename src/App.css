@@ -1,24 +1,52 @@
 body {
-  background:  #a6acaf; 
-  font-family: arial;
-  color: #000;
-  text-transform: uppercase;
+    background:  #a6acaf; 
+    font-family: arial;
+    color: #000;
+    text-transform: uppercase;
 }
 
 .header {
-  padding: 5px 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: #ebedef;
-  border-radius: 15px 15px 0 0;
-  border-bottom: solid 2px #444;
+    padding: 5px 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #ebedef;
+    border-radius: 15px 15px 0 0;
+    border-bottom: solid 2px #444;
+}
+
+.header h2 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-weight: normal;
 }
 
 .contact-list {
-	background: #333;
+    background: #333;
 	width: 700px;
 	margin: 70px auto;
 	box-shadow: 0 4px 0px #333;
 	border-radius: 15px;
+}
+
+.h-stats {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.h-stats td:first-child {
+    text-align: right;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #666;
+    font-size: .7em;
+}
+
+.h-stats td:last-child {
+    text-align: left;
+}
+
+.header .h-stats {
+    width: 200px;
 }
