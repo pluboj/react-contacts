@@ -7,7 +7,10 @@ const Contact = props => {
 	return (
 		<div className="contact">
 			<div className="contact-name">
-				<a className="remove-contact">
+				<a 
+					className="remove-contact"
+					onClick={props.onRemove}
+				>
 					<FaTrash />
 				</a>
 				{props.name}
@@ -22,7 +25,8 @@ const Contact = props => {
 
 Contact.PropTypes = {
 	name: PropTypes.string.isRequired,
-	phone: PropTypes.string.isRequired
+	phone: PropTypes.string.isRequired,
+	onRemove: PropTypes.func.isRequired
 }
 
 export default Contact;

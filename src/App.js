@@ -15,6 +15,11 @@ export default class App extends Component {
         phone: '(514) 201-7504'
       },  
     ]
+  };
+
+  onRemoveContact = (index) => {
+    this.state.contacts.splice(index, 1);
+    this.setState(this.state);
   }
 
   render() {
@@ -24,6 +29,7 @@ export default class App extends Component {
           name={contact.name}
           phone={contact.phone}
           key={"contact-"+index}
+          onRemove={() => this.onRemoveContact(index)}
         />
       )
     })
