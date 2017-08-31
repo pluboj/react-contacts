@@ -11,6 +11,9 @@ const Contact = props => {
 				</a>
 				{props.name}
 			</div>
+			<div className="contact-phone">
+				{props.phone}
+			</div>
 		</div>
 	)
 }

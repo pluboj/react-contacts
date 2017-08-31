@@ -8,11 +8,11 @@ export default class App extends Component {
     contacts: [
       {
         name: 'Tim Tomtom',
-        phone: '510-221-2556'
+        phone: '(510) 221-2556'
       },
       {
         name: 'Ronaldo Sancho Pancha',
-        phone: '514-201-7504'
+        phone: '(514) 201-7504'
       },  
     ]
   }
