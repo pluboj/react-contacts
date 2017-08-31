@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Contact from './components/Contact';
+import AddContactForm from './components/AddContactForm';
 
 export default class App extends Component {
   state = {
@@ -20,6 +21,23 @@ export default class App extends Component {
   onRemoveContact = (index) => {
     const contacts = this.state.contacts.splice(index, 1);
     this.setState(contacts);
+  };
+
+  onAddContact = (data) => {
+    const contacts = this.state.contacts;
+    contacts.push({
+      name: data.name, 
+      phone: this.formatPhone(data.phone)
+    });
+    
+    this.setState(contacts);
+  };
+
+  formatPhone = (number) => {
+    const area = number.slice(0, 3);
+    const prefix = number.slice(3, 6);
+    const line = number.slice(6, 10);
+    return "("+area+") "+ prefix + "-" + line;
   }
 
   render() {
@@ -40,6 +58,7 @@ export default class App extends Component {
         <div className="contacts">
           {contacts}
         </div>
+        <AddContactForm onAdd={this.onAddContact}/>
       </div>
     );
   }
