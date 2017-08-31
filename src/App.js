@@ -18,8 +18,8 @@ export default class App extends Component {
   };
 
   onRemoveContact = (index) => {
-    this.state.contacts.splice(index, 1);
-    this.setState(this.state);
+    const contacts = this.state.contacts.splice(index, 1);
+    this.setState(contacts);
   }
 
   render() {
