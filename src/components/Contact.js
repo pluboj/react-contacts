@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FaTrash from 'react-icons/lib/fa/trash';
+import FaPhone from 'react-icons/lib/fa/phone';
 
 const Contact = props => {
 	return (
@@ -12,6 +13,7 @@ const Contact = props => {
 				{props.name}
 			</div>
 			<div className="contact-phone">
+				<FaPhone style={{color: "green"}}/>
 				{props.phone}
 			</div>
 		</div>
