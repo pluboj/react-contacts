@@ -9,7 +9,7 @@ const Contact = props => {
 			<div className="contact-name">
 				<a 
 					className="remove-contact"
-					onClick={props.onRemove}
+					onClick={ () => props.removeContact(props.index) }
 				>
 					<FaTrash />
 				</a>
@@ -25,8 +25,9 @@ const Contact = props => {
 
 Contact.PropTypes = {
 	name: PropTypes.string.isRequired,
+	index: PropTypes.number.isRequired,
 	phone: PropTypes.string.isRequired,
-	onRemove: PropTypes.func.isRequired
+	removeContact: PropTypes.func.isRequired
 }
 
 export default Contact;

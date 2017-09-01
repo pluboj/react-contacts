@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default class AddContactForm extends Component {
 	static PropTypes: {
-		onAdd: PropTypes.func.isRequired;
+		addContact: PropTypes.func.isRequired;
 	}
 
 	state = {
@@ -19,19 +19,29 @@ export default class AddContactForm extends Component {
 		this.setState(data);
 	};
 
-	onSubmit = (evt) => {
+	addContact = (evt) => {
 		evt.preventDefault();
-		this.props.onAdd(this.state);
+		this.props.addContact(
+			this.state.name, 
+			this.formatPhone(this.state.phone)
+		);
 		this.setState({
 			name: '',
 			phone: ''
 		});
 	};
 
+	formatPhone = (number) => {
+	    const area = number.slice(0, 3);
+	    const prefix = number.slice(3, 6);
+	    const line = number.slice(6, 10);
+	    return "("+area+") "+ prefix + "-" + line;
+	}
+
 	render () {
 		return (
 			<div className="add-contact-form">
-				<form onSubmit={this.onSubmit}>
+				<form onSubmit={this.addContact}>
 					<input
 						type="text"
 						name="name"
