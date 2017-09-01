@@ -38,6 +38,7 @@ export default class AddContactForm extends Component {
 						placeholder="Name"
 						value={this.state.name}
 						onChange={this.onChange}
+						maxLength={30}
 					/>
 					<input
 						type="text"
@@ -45,6 +46,7 @@ export default class AddContactForm extends Component {
 						placeholder="Phone #"
 						value={this.state.phone}
 						onChange={this.onChange}
+						maxLength={10}
 					/>
 					<input
 						type="submit"
