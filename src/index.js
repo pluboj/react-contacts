@@ -8,7 +8,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
-	ContactReducer
+	ContactReducer,
+	window.devToolsExtension && window.devToolsExtension()
 );
 
 ReactDOM.render(
